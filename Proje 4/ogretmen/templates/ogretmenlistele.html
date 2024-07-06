@@ -1,0 +1,33 @@
+{%extends 'ogretmenw.html'%}
+{%block liste%}
+
+<table class="table table-striped table-hover"">
+  <thead>
+    <tr>
+      <th scope="col">telefon</th>
+      <th scope="col">adsoyad</th>
+      <th scope="col">maas</th>
+      <th scope="col">brans</th>
+      <th scope="col">islemler</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in ogretmenlistele %} 
+    <!-- dikkat, : işareti yok -->
+    <tr>
+      <th scope="row">{{x.telefon}}</th>
+      <td>{{ x.adsoyad }}</td>
+      <td>{{ x.maas }}</td>
+      <td>{{ x.brans }}</td>
+      
+      <td>
+        <a href="/ogretmen/detay/{{x.id}}">Detay</a>
+        <a href="/ogretmenler/sil/{{x.id}}">Sil</a>
+        <a class="btn btn-info" href="guncelle/{{ x.id }}">düzenle</a> 
+
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%endblock%}

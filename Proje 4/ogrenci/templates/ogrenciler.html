@@ -1,0 +1,30 @@
+{% extends 'abc.html'%}
+{%load static%}
+
+{% block anabolum%}  
+  <!-- <img src="{%static 'logo.png'%}" alt=""> -->
+  <h1 style="color:#B1DE94;font-size: 40px;">Öğrenci sayfası</h1>
+  <!-- <a href="/">Ana sayfa</a> -->
+  <a href="/">
+    <img height="50" src="{%static 'home1.png'%}" alt="">
+    </a>
+  
+  <hr>
+  
+  <a href="/ogrenci/ekle" type="button" class="btn btn-outline-primary">Öğrenci ekle</a>
+  <a href="/ogrenciler" type="button" class="btn btn-outline-warning">Öğrenci listesi</a>
+  
+<style>
+  body{
+    /* background-color: green; */
+     background="{%static 'b1.jpg'%}"
+  }
+</style>
+  {%block liste%}
+  {% endblock %}
+
+  {%block ekle%}
+  {% endblock %}
+  <h2>Program kullanımı</h2>
+  <iframe src="https://youtube.com/embed/oJh48UDcTnE" frameborder="0"></iframe>
+{% endblock %}

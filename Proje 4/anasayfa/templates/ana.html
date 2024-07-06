@@ -1,0 +1,149 @@
+{% extends "abc.html" %}
+{% load static%}
+
+{% block anabolum%}
+
+
+  <br><br>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  
+  <center>
+    <br>
+    <h1>Ana sayfa</h1>
+    <br>
+    
+    <div id="dabilcerceve" class="cerceveyap golgeMavi bosluklu">  
+      <h2>Öğrenci sayfası</h2>
+      <img height="100px" src="p1.png"/>
+      <img width="200px" src="{% static 'man1.png' %}" alt="man1">
+      <br>
+      <a href="/ogrenci">Ogrenci sayfasi</a>
+      <a href="resimler/11.pdf">indir</a>
+    </div>
+
+  <br>
+
+    <div class="cerceveyap golgeKirmizi bosluklu">
+      <h2 style="color:seagreen">Öğretmen sayfası</h2>
+      <a href="/ogretmenler">
+        <img width="200px" src="{% static 'ogrenci1.png'%}" alt=""/>
+      <!-- <img download height="100px" src="p1.png"/> -->
+      </a>
+      <br>
+      <br>
+      <a href="/ogretmenler">Ogretmen sayfasi</a>
+    </div>
+    
+  </center>
+  <hr>
+  <marquee style="color:royalblue" behavior="" direction="">
+    Web siteme hoşgeldiniz.
+  </marquee>
+
+  
+  <style>
+  body{
+    background-color: seagreen;
+  }
+    div:hover{
+      /* background-color: gray; */
+    }
+  /* Bütün divlere uygulamasını istemediğimiz için kapattık */
+  /* div{
+    border-style:solid
+  } */
+
+  .cerceveyap{
+    /* padding:20px;*/
+    /* border:solid red;  */
+    border-style: solid;
+    border-color: seagreen;
+    border-radius:20px;
+    
+    width:30%;
+    /* height:50px; */
+    /* max-width:250px; */
+    /* box-shadow:-10px 5px 10px blue;; */
+    
+  }
+    .cerceveyap:hover{
+      background-color: royalblue;
+      box-shadow:0px 0px 20px rgba(200,0,0,.8);
+
+    }
+    .bosluklu{
+      padding:20px;
+      margin:20px;
+    }
+  .golgeMavi{
+    /* box-shadow:-10px 5px 10px blue;; */
+
+  }
+  .golgeKirmizi{
+    /* box-shadow:-10px 5px 10px rgba(200,0,0,.5); */
+
+  }
+  #dabilcerceve{
+    border-style: double;
+  }
+  
+  h2{
+    color:blanchedalmond
+    
+  }
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: seagreen;
+    color: seagreen;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: seagreen;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: yellow;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+</style>
+  {% block degiskenbolum%}
+  {%endblock%}
+{%endblock%}
